@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 const dt = "my book";
 app.use("/", (req, res) => {
-  res.sendFile(__dirname + "/form.html");
+  res.sendFile(__dirname + "/register.html");
   const html = `<div>
     <h1>This is my first SSR app</h1>
     <p> I have just created server side rendering app with node and expressJS</p>
