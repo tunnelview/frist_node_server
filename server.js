@@ -9,6 +9,15 @@ import fs from "fs";
 import path from "path";
 const __dirname = path.resolve();
 
+app.get("/", (req, res) => {
+  res.send(`<h1>welcome to xyz</h1> 
+    <p>This is my first SSR app</p>
+    <a> I have just created server side rendering app with node and expressJS</a>
+    <a>
+  </div>;
+  `);
+});
+
 const dt = "my book";
 app.use("/", (req, res) => {
   res.sendFile(__dirname + "/form.html");
