@@ -1,10 +1,9 @@
 import express from "express";
-// const express = require("express");
 const app = express();
 
 import fs from "fs";
-// const fs = require("fs");
-// const path = require("path");
+
+app.use(express.urlencoded({ extended: true }));
 
 import path from "path";
 const __dirname = path.resolve();
