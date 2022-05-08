@@ -25,7 +25,7 @@ app.post("/register", (req, res) => {
 
   // use fs to create a file
 
-  fs.writeFile(fn, str1, (error) => {
+  fs.appendFile(fn, str1, (error) => {
     if (error) {
       console.log(error);
     }
@@ -49,7 +49,6 @@ app.post("/login", (req, res) => {
     const userList = data.toString().split("\n");
 
     const found = userList.some((item) => {
-      // userList.map((item) => {
       const userArg = item.split("|");
       const userEmail = userArg[1];
       const userPass = userArg[2];
